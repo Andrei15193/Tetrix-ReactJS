@@ -1,0 +1,167 @@
+body{
+    background-color: #EFEFEF;
+}
+
+.tetrix {
+    display: table;
+    margin: 0 auto;
+    font-family: Courier New, Courier, monospace;
+}
+
+.tetrix .tableRow {
+    display: table-row;
+}
+
+.tetrix .tableCell {
+    display: table-cell;
+}
+
+.tetrix .gameTitle {
+    text-align: center;
+}
+
+.tetrix .map {
+    display: table;
+    border: 1px solid lightgray;
+    border-width: 1px 0 0 1px;
+}
+
+.tetrix .map .row {
+    display: table-row;
+}
+
+.tetrix .map .cell {
+    display: table-cell;
+}
+
+.tetrix .map .shape-none {
+    background-color: initial;
+
+    width: 9px;
+    height: 9px;
+
+    border-style: solid;
+    border-color: lightgray;
+
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.tetrix .map .shape-i {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #92CD00;
+
+    border-top-color: #BCE064;
+    border-left-color: #BCE064; 
+
+    border-right-color: #5E8400;
+    border-bottom-color: #5E8400;
+}
+
+.tetrix .map .shape-j {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #FF0000;
+
+    border-top-color: #FF6464;
+    border-left-color: #FF6464; 
+
+    border-right-color: #AF0000;
+    border-bottom-color: #AF0000;
+}
+
+.tetrix .map .shape-l {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #FF9900;
+
+    border-top-color: #FFBD5A;
+    border-left-color: #FFBD5A; 
+
+    border-right-color: #9B5D00;
+    border-bottom-color: #9B5D00;
+}
+
+.tetrix .map .shape-o {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #3366CC;
+
+    border-top-color: #7396DC;
+    border-left-color: #7396DC; 
+
+    border-right-color: #1F3E7C;
+    border-bottom-color: #1F3E7C;
+}
+
+.tetrix .map .shape-s {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #8C489F;
+
+    border-top-color: #B081BD;
+    border-left-color: #B081BD; 
+
+    border-right-color: #552B60;
+    border-bottom-color: #552B60;
+}
+
+.tetrix .map .shape-t {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #6BCAE2;
+
+    border-top-color: #99DAEB;
+    border-left-color: #99DAEB; 
+
+    border-right-color: #458292;
+    border-bottom-color: #458292;
+}
+
+.tetrix .map .shape-z {
+    width: 8px;
+    height: 8px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #CE1A8F;
+
+    border-top-color: #DD61B2;
+    border-left-color: #DD61B2; 
+
+    border-right-color: #951267;
+    border-bottom-color: #951267;
+}
+
+.tetrix .info {
+    width: 100px;
+    margin-left: 10px;
+}
