@@ -1,6 +1,5 @@
-require('./tetrix.css');
-
 import React from 'react';
+import Styles from './tetrix.css';
 
 class Location {
     constructor(top, left) {
@@ -522,15 +521,15 @@ export class Grid extends React.Component {
             for (var columnIndex = 0; columnIndex < this.props.width; columnIndex++) {
                 var cellKey = (rowIndex.toString() + ',' + columnIndex.toString());
                 cells.push((
-                    <div className="cell" key={cellKey}>
-                        <div className={"shape-" + this.state[cellKey]}></div>
+                    <div className={Styles.cell} key={cellKey}>
+                        <div className={Styles["shape-" + this.state[cellKey]]}></div>
                     </div>));
             }
-            rows.push(<div className="row" key={rowKey}>{cells}</div>);
+            rows.push(<div className={Styles.row} key={rowKey}>{cells}</div>);
         }
 
         return (
-            <div className="map">{rows}</div>
+            <div className={Styles.map}>{rows}</div>
         );
     }
 }
@@ -622,32 +621,34 @@ export default class TetrixMap extends React.Component {
             for (var columnIndex = 0; columnIndex < this.props.width; columnIndex++) {
                 var cellKey = (rowIndex.toString() + ',' + columnIndex.toString());
                 cells.push((
-                    <div className="cell" key={cellKey}>
-                        <div className={"shape-" + this.state[cellKey]}></div>
+                    <div className={Styles.cell} key={cellKey}>
+                        <div className={Styles["shape-" + this.state[cellKey]]}></div>
                     </div>));
             }
-            rows.push(<div className="row" key={rowKey}>{cells}</div>);
+            rows.push(<div className={Styles.row} key={rowKey}>{cells}</div>);
         }
 
         return (
-            <div className="tetrix">
-                <div className="tableRow gameTitle">
-                    <div className="tableCell">
-                        {this.state.isGameOver ?
-                            (<span>Game Over</span>) :
-                            (<span>Tetrix<sub>ALPHA</sub></span>) }
+            <div className={Styles.full}>
+                <div className={Styles.tetrix}>
+                    <div className={Styles.tableRow + " " + Styles.gameTitle}>
+                        <div className={Styles.tableCell}>
+                            {this.state.isGameOver ?
+                                (<span>Game Over</span>) :
+                                (<span>Tetrix<sub>ALPHA</sub></span>)}
+                        </div>
                     </div>
-                </div>
-                <div className="tableRow">
-                    <div className="tableCell">
-                        <div className="map">{rows}</div>
-                    </div>
-                    <div className="tableCell">
-                        <div className="info">
-                            <div>Next: </div>
-                            <Grid ref={this._gridMounted.bind(this) } height={4} width={6} />
-                            <div>Score: {this.state.score.toString() }</div>
-                            <div>Level: {this.state.level.toString() }</div>
+                    <div className={Styles.tableRow}>
+                        <div className={Styles.tableCell}>
+                            <div className={Styles.map}>{rows}</div>
+                        </div>
+                        <div className={Styles.tableCell}>
+                            <div className={Styles.info}>
+                                <div>Next: </div>
+                                <Grid ref={this._gridMounted.bind(this)} height={4} width={6} />
+                                <div>Score: {this.state.score.toString()}</div>
+                                <div>Level: {this.state.level.toString()}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
