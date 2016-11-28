@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "webpack",
+    "debug-build": "webpack",
+    "release-build": "webpack -p",
     "watch-build": "webpack --watch",
     "dev-server": "webpack-dev-server --content-base public --inline --hot"
   },

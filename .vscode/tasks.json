@@ -10,7 +10,11 @@
     "tasks": [
         {
             "taskName": "build",
-            "args": ["run", "build"]
+            "args": ["run", "debug-build"]
+        },
+        {
+            "taskName": "release",
+            "args": ["run", "release-build"]
         },
         {
             "taskName": "install",

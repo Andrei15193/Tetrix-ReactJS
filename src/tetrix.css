@@ -1,40 +1,46 @@
-:local(.full) {
-    background-color: #EFEFEF;
-}
-
-:local(.tetrix) {
+:local(.tetrix)
+{
     display: table;
     margin: 0 auto;
     font-family: Courier New, Courier, monospace;
 }
 
-:local(.tetrix) :local(.tableRow) {
-    display: table-row;
-}
-
-:local(.tetrix) .tableCell {
-    display: table-cell;
-}
-
-:local(.tetrix) .gameTitle {
-    text-align: center;
-}
-
-:local(.tetrix) .map {
+:local(.tetrix) > :local(.container)
+{
     display: table;
+    margin: 0 auto;
+}
+
+:local(.tetrix)
+    :local(.grid)
+{
+    display: table;
+    margin: 0 auto;
     border: 1px solid lightgray;
     border-width: 1px 0 0 1px;
 }
 
-:local(.tetrix) .map .row {
+:local(.tetrix)
+    :local(.grid) > :local(.row)
+{
     display: table-row;
 }
 
-:local(.tetrix) .map .cell {
+:local(.tetrix)
+    h1
+{
+    text-align: center;
+}
+
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell)
+{
     display: table-cell;
 }
 
-:local(.tetrix) .map .shape-none {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-none)
+{
     background-color: initial;
 
     width: 9px;
@@ -49,7 +55,9 @@
     border-bottom-width: 1px;
 }
 
-:local(.tetrix) .map .shape-i {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-i)
+{
     width: 8px;
     height: 8px;
 
@@ -65,7 +73,9 @@
     border-bottom-color: #5E8400;
 }
 
-:local(.tetrix) .map .shape-j {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-j)
+{
     width: 8px;
     height: 8px;
 
@@ -81,7 +91,9 @@
     border-bottom-color: #AF0000;
 }
 
-:local(.tetrix) .map .shape-l {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-l)
+{
     width: 8px;
     height: 8px;
 
@@ -97,7 +109,9 @@
     border-bottom-color: #9B5D00;
 }
 
-:local(.tetrix) .map .shape-o {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-o)
+{
     width: 8px;
     height: 8px;
 
@@ -113,7 +127,9 @@
     border-bottom-color: #1F3E7C;
 }
 
-:local(.tetrix) .map .shape-s {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-s)
+{
     width: 8px;
     height: 8px;
 
@@ -129,7 +145,9 @@
     border-bottom-color: #552B60;
 }
 
-:local(.tetrix) .map .shape-t {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-t)
+{
     width: 8px;
     height: 8px;
 
@@ -145,7 +163,9 @@
     border-bottom-color: #458292;
 }
 
-:local(.tetrix) .map .shape-z {
+:local(.tetrix)
+    :local(.grid) > :local(.row) > :local(.cell) > :local(.shape-z)
+{
     width: 8px;
     height: 8px;
 
@@ -161,7 +181,28 @@
     border-bottom-color: #951267;
 }
 
-:local(.tetrix) .info {
-    width: 100px;
-    margin-left: 10px;
+:local(.tetrix)
+    :local(.rank)
+{
+    text-align: right;
+}
+
+:local(.tetrix)
+    :local(.nextShape)
+{
+    display: table;
+    margin: 20px auto 0;
+}
+
+:local(.tetrix)
+    :local(.controls)
+{
+    width: 200px;
+}
+
+:local(.tetrix)
+    :local(.controls)
+        p
+{
+    text-align: justify;
 }

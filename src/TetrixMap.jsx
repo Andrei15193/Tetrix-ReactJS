@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './tetrix.css';
+import Styles from './Tetrix.css';
 
 class Location {
     constructor(top, left) {
@@ -30,172 +30,6 @@ class Location {
 }
 
 class Shape {
-    static get i() {
-        return new Shape(
-            'i',
-            [
-                [
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(0, 3)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 1),
-                    new Location(1, 1),
-                    new Location(2, 1)
-                ]
-            ]
-        )
-    }
-
-    static get j() {
-        return new Shape(
-            'j',
-            [
-                [
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 2)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 1),
-                    new Location(1, 1),
-                    new Location(1, 0)
-                ],
-                [
-                    new Location(-1, 0),
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(-1, 2),
-                    new Location(0, 1),
-                    new Location(1, 1)
-                ]
-            ]
-        )
-    }
-
-    static get l() {
-        return new Shape(
-            'l',
-            [
-                [
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 0)
-                ],
-                [
-                    new Location(-1, 0),
-                    new Location(-1, 1),
-                    new Location(0, 1),
-                    new Location(1, 1)
-                ],
-                [
-                    new Location(-1, 2),
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 1),
-                    new Location(1, 1),
-                    new Location(1, 2)
-                ]
-            ]
-        )
-    }
-
-    static get o() {
-        return new Shape(
-            'o',
-            [
-                [
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 1),
-                    new Location(1, 2)
-                ]
-            ]);
-    }
-
-    static get s() {
-        return new Shape(
-            's',
-            [
-                [
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 0),
-                    new Location(1, 1)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 2)
-                ]
-            ]);
-    }
-
-    static get t() {
-        return new Shape(
-            't',
-            [
-                [
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 1)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(1, 1)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(0, 2)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 1),
-                    new Location(0, 2),
-                    new Location(1, 1)
-                ]
-            ]);
-    }
-
-    static get z() {
-        return new Shape(
-            'z',
-            [
-                [
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(1, 1),
-                    new Location(1, 2)
-                ],
-                [
-                    new Location(-1, 1),
-                    new Location(0, 0),
-                    new Location(0, 1),
-                    new Location(1, 0)
-                ]
-            ]);
-    }
-
     static getRandomShape() {
         var availableShapes = [
             Shape.i,
@@ -567,7 +401,7 @@ export default class TetrixMap extends React.Component {
     }
 
     componentDidMount() {
-        document.addEventListener("keydown", this.keyPressed.bind(this));
+            document.addEventListener("keydown", this.keyPressed.bind(this));
     }
 
     componentWillUnmount() {

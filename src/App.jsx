@@ -1,10 +1,8 @@
 import React from 'react';
-import TetrixMap from './TetrixMap.jsx';
+import Tetrix from './Tetrix.jsx';
 
 export default class App extends React.Component {
     render() {
-        return (
-            <TetrixMap />
-        );
+        return (<Tetrix />);
     }
 }
