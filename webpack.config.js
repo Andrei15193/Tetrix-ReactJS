@@ -8,6 +8,13 @@ module.exports = {
     context: __dirname,
     devtool: (IS_PRODUCTION ? null : "inline-sourcemap"),
     entry: path.join(__dirname, "src", "index.jsx"),
+    resolve: {
+        extensions: ["", ".js", ".jsx"],
+        alias: {
+            common: path.resolve(__dirname, "src"),
+            tetrix: path.resolve(__dirname, "src", "tetrix", "app")
+        }
+    },
     module: {
         loaders: [
             {

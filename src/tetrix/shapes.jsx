@@ -1,5 +1,5 @@
-import ShapeNames from './ShapeNames.jsx';
-import Location from './Location.jsx';
+import Location from "common/location";
+import ShapeNames from "./shapeNames";
 
 class Shape {
     constructor(name, squaresLocations, position) {

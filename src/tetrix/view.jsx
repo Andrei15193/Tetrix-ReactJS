@@ -1,7 +1,7 @@
-import React from 'react';
-import ShapeNames from './ShapeNames.jsx';
+import React from "react";
+import ShapeNames from "./shapeNames";
 
-export default class TetrixView extends React.Component {
+export default class View extends React.Component {
     constructor(props) {
         super(props);
         this.state = { gameState: this.props.store.state };

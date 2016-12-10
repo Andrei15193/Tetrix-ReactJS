@@ -1,9 +1,11 @@
-import EventEmitter from 'events';
-import Keys from './Keys.jsx';
-import Location from './Location.jsx';
-import Shapes from './Shapes.jsx';
+import EventEmitter from "events";
+import Location from "common/location";
+import Keys from "common/keys";
+import Shapes from "./shapes";
 
-export default class TetrixGame extends EventEmitter {
+const MaximumSpeedLevel = 11;
+
+export default class Board extends EventEmitter {
     constructor() {
         super();
         this._rank = new Rank();
@@ -43,7 +45,7 @@ export default class TetrixGame extends EventEmitter {
     }
 
     get _timeoutInterval() {
-        const factor = Math.min(this._rank._level, 10);
+        const factor = Math.min(this._rank._level, MaximumSpeedLevel);
         return (1200 - (factor * 100));
     }
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import Tetrix from './Tetrix.jsx';
+import React from "react";
+import Tetrix from "tetrix";
 
 export default class App extends React.Component {
     render() {

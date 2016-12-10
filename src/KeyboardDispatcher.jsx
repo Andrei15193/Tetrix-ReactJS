@@ -1,5 +1,5 @@
-import { Dispatcher } from 'flux';
-import Keys from './Keys.jsx';
+import { Dispatcher } from "flux";
+import Keys from "./keys";
 
 const dispatcher = new Dispatcher();
 export default dispatcher;
