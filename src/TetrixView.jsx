@@ -1,50 +1,16 @@
 import React from 'react';
-import KeyCodes from './KeyCodes.jsx';
 import ShapeNames from './ShapeNames.jsx';
 
 export default class TetrixView extends React.Component {
     constructor(props) {
         super(props);
-        this._keyPressed = this._keyPressed.bind(this);
         this.state = { gameState: this.props.store.state };
         this.props.store.on("stateChanged", () => this.setState({ gameState: this.props.store.state }));
     }
 
-    componentDidMount() {
-        document.addEventListener("keydown", this._keyPressed);
-    }
-
     componentWillUnmount() {
-        document.removeEventListener("keydown", this._keyPressed);
         if (this, props.store.state == "InProgress")
             this.props.store.pause();
-    }
-
-    _keyPressed(e) {
-        if (this.props.store.state == "NotStarted")
-            this.props.store.start();
-
-        switch (e.keyCode) {
-            case KeyCodes.Up:
-                this.props.keyboardActions.up();
-                break;
-
-            case KeyCodes.Left:
-                this.props.keyboardActions.left();
-                break;
-
-            case KeyCodes.Right:
-                this.props.keyboardActions.right();
-                break;
-
-            case KeyCodes.Down:
-                this.props.keyboardActions.down();
-                break;
-
-            case KeyCodes.Space:
-                this.props.keyboardActions.space();
-                break;
-        }
     }
 
     render() {

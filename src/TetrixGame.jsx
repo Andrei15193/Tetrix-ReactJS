@@ -83,29 +83,34 @@ export default class TetrixGame extends EventEmitter {
     }
 
     handle(action) {
-        if (this.state == "InProgress") {
-            var dropShape = false;
-            switch (action.key) {
-                case Keys.Left:
-                    this._map.moveShapeLeft();
-                    break;
+        switch (this.state) {
+            case "NotStarted":
+                this.start();
+                break;
 
-                case Keys.Right:
-                    this._map.moveShapeRight();
-                    break;
+            case "InProgress":
+                switch (action.key) {
+                    case Keys.Left:
+                        this._map.moveShapeLeft();
+                        break;
 
-                case Keys.Up:
-                    this._map.rotateShape();
-                    break;
+                    case Keys.Right:
+                        this._map.moveShapeRight();
+                        break;
 
-                case Keys.Down:
-                    this._moveShapeDown();
-                    break;
+                    case Keys.Up:
+                        this._map.rotateShape();
+                        break;
 
-                case Keys.Space:
-                    this._dropShape();
-                    break;
-            }
+                    case Keys.Down:
+                        this._moveShapeDown();
+                        break;
+
+                    case Keys.Space:
+                        this._dropShape();
+                        break;
+                }
+                break;
         }
     }
 
